@@ -3,7 +3,7 @@ Given /^I am on the homepage$/ do
 end
 
 When /^I follow "(.*?)"$/ do |arg1|
-    click_link(arg1)
+  click_link(arg1)
 end
 
 When /^I fill in "(.*?)" with "(.*?)"$/ do |arg1, arg2|
@@ -16,4 +16,9 @@ end
 
 Then /^I should see "(.*?)"$/ do |arg1|
   page.should have_content(arg1)
+end
+
+Then /^I should be on the project page for "(.*?)"$/ do |arg1|
+  current_path.should == project_path(Project.find_by_name!('textMate 2'))
+  page.should have_content("textMate 2 - Projects - Ticketee")
 end
