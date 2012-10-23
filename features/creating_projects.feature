@@ -8,11 +8,11 @@ Feature: Creating projects
     When I follow "New Project"
 
   Scenario: Creating a project
-    And I fill in "Name" with "textMate 2"
+    And I fill in "Name" with "Textmate 2"
     And I press "Create Project"
     Then I should see "Project has been created."
-    And I should be on the project page for "textMate 2"
-    And I should see "textMate 2 - Projects - Ticketee"
+    And I should be on the project page for "Textmate 2"
+    And I should see "Textmate 2 - Projects - Ticketee"
 
   Scenario: Creating a project without a name
     And I press "Create Project"
